@@ -3,7 +3,7 @@ module HasFriendship
     validate :satisfy_custom_conditions
 
     after_create do |record|
-      friend.on_friendship_created(record)
+      friendable.on_friendship_created(record)
     end
 
     after_destroy do |record|
